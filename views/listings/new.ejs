@@ -1,0 +1,60 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+    <h3>Create a new listing</h3>
+    <br>
+    <form method="post" action="/listings"  novalidate class="needs-validation" enctype="multipart/form-data" >
+       
+            <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input  class="form-control" type="text" placeholder="Enter the title" name="listing[title]" required>
+        <div class="invalid-feedback">
+          Please enter the title
+          </div>
+    </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" name="listing[description]" cols="30" rows="3" required></textarea>
+          <div class="invalid-feedback">
+            Please enter the description
+            </div>
+    </div>
+    <div class="mb-3">
+        <label for="image" class="form-label">image</label>
+        <input  class="form-control"type="file" name="listing[image]" required>
+    </div>
+    <div class="row">
+    <div class="mb-3 col-md-4" >
+        <label for="price" class="form-label">Price</label>
+        <input  class="form-control"type="text" name="listing[price]" placeholder="enter the price" required>
+        <div class="invalid-feedback">
+            Please enter the Price
+            </div>
+        </div>
+            <div class="mb-3 col-md-8">
+                <label for="country" class="form-label">Country</label>
+                <input class="form-control" type="text" name="listing[country]" placeholder="enter the country" required>
+                <div class="invalid-feedback">
+                    Please enter the country
+                    </div>
+            </div>
+    
+   
+</div>
+<div class="mb-3 ">
+    <label for="location" class="form-label">Location</label>
+        <input class="form-control" type="text" name="listing[location]" placeholder="enter the location" required>
+        <div class="invalid-feedback">
+            Please enter the location
+            </div>
+    </div>
+
+    <br>
+        <button class="btn btn-dark add-btn" class="mb-3">submit</button>
+   
+    </form>
+    <br><br>
+</div>
+</div>
+</body>
